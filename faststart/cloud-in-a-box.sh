@@ -66,7 +66,6 @@ done
 # Make Fix for Dead DNS Resolution.
 #
 ###############################################################################
-rm -r /etc/resolv.conf
 echo nameserver 8.8.8.8 > /etc/resolv.conf
 chattr +i /etc/resolv.conf
 
