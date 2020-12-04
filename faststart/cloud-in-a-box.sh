@@ -61,6 +61,15 @@ done
 #   * Put *all* output for *all* commands into log file
 ###############################################################################
 
+
+###############################################################################
+# Make Fix for Dead DNS Resolution.
+#
+###############################################################################
+
+echo nameserver 8.8.8.8 > /etc/resolv.conf
+chattr +i /etc/resolv.conf
+
 # Function for all of faststart, ensures nothing is run until script is
 # complete
 function faststart()
